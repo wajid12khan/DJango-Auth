@@ -1,0 +1,50 @@
+{% include "base.html" %} {% block body %}
+<div class="container">
+  <div class="card">
+    <div class="card_header">
+      <h2 class="text-center">Registrations</h2>
+    </div>
+    <div class="card_body">
+      <form action="/" method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            name="username"
+            placeholder="Username"
+          />
+        </div>
+        <div class="mb-3">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              class="form-control form-control-lg"
+              name="email"
+              placeholder="Email"
+            /><br />
+        <div class="mb-3">
+            <label for="Password">Password</label>
+            <input
+              type="Password"
+              class="form-control form-control-lg"
+              name="password"
+              placeholder="Password"
+            /><br />
+        </div>
+        <div class="mb-3">
+            <label for="Password">Confirm Password</label>
+            <input
+              type="Password"
+              class="form-control form-control-lg"
+              name="cpassword"
+              placeholder="Password"
+            /><br />
+        <button class="btn btn-primary" type="submit">Register</button>
+        <p>Already have an account <a href="/">Login</a></p>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
